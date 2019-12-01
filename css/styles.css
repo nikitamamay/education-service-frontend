@@ -1,0 +1,132 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+html, body {
+	height: 100%;
+}
+body {
+	position: relative;
+	padding-bottom: 250px;
+}
+
+
+.positioner {
+	max-width: 980px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+.flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.col1 { width: 8.333%; }
+.col2 { width: 16.666%; }
+.col3 { width: 25%; }
+.col4 { width: 33.333%; }
+.col5 { width: 41.666%; }
+.col6 { width: 50%; }
+.col7 { width: 58.333%; }
+.col8 { width: 66.666%; }
+.col9 { width: 75%; }
+.col10 { width: 83.333%; }
+.col11 { width: 91.666%; }
+.col12 { width: 100%; }
+
+.button {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+
+.page-nav {
+	background-color: #E24500;
+	min-height: 50px;
+}
+.page-nav *,
+.page-footer * {
+	color: white;
+}
+
+.page-nav-logo {
+
+}
+.page-nav-logo-img {
+
+}
+
+.page-nav-ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.page-nav a {
+	display: block;
+	text-decoration: none;
+	padding: 0 10px;
+	height: 50px;
+	line-height: 50px;
+}
+.page-nav .active,
+.page-nav a:focus,
+.page-nav a:hover {
+	background-color: #B53700;
+}
+
+
+.banner {
+	background: gray url("../img/banner.jpg") no-repeat center 65%;
+	background-size: cover;
+	min-height: 250px;
+}
+.banner * {
+	color: white;
+}
+.banner-positioner > * + * {
+	margin-top: 15px;
+}
+.banner-button {
+	text-align: center;
+	border-color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.banner-button:focus,
+.banner-button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.page-footer {
+	height: 250px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: #260C00;
+	padding: 10px 0;
+}
+.page-footer-ul {
+	list-style: none;
+	line-height: 1.3;
+}
+.page-footer-ul a {
+	text-decoration: none;
+}
+.page-footer-ul a:focus,
+.page-footer-ul a:hover {
+	text-decoration: underline;
+}
