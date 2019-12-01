@@ -44,6 +44,13 @@ body {
 .col11 { width: 91.666%; }
 .col12 { width: 100%; }
 
+.align-right {
+	text-align: right;
+}
+.align-center {
+	text-align: center;
+}
+
 .button {
 	display: inline-block;
 	text-decoration: none;
@@ -62,11 +69,9 @@ body {
 	color: white;
 }
 
-.page-nav-logo {
-
+.logo {
 }
-.page-nav-logo-img {
-
+.logo-img {
 }
 
 .page-nav-ul {
@@ -83,7 +88,9 @@ body {
 }
 .page-nav .active,
 .page-nav a:focus,
-.page-nav a:hover {
+.page-nav a:hover,
+.input-submit:focus,
+.input-submit:hover {
 	background-color: #B53700;
 }
 
@@ -92,6 +99,7 @@ body {
 	background: gray url("../img/banner.jpg") no-repeat center 65%;
 	background-size: cover;
 	min-height: 250px;
+	padding: 10px;
 }
 .banner * {
 	color: white;
@@ -109,6 +117,50 @@ body {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
+
+.features-block {
+	padding: 20px 5px;
+}
+.features-img {
+	margin-bottom: 15px;
+}
+
+
+.section-gray {
+	background-color: #ddd;
+}
+
+
+.form-line > * {
+	flex-grow: 1;
+	border: 1px solid #B53700;
+}
+.form-line > * + * {
+	border-left: none;
+}
+.form-line :first-child {
+	border-radius: 5px 0 0 5px;
+}
+.form-line :last-child {
+	border-radius: 0 5px 5px 0;
+}
+.input-text {
+	outline: none;
+	padding: 5px 10px;
+}
+.input-text:focus {
+	box-shadow: inset 0 0 5px #B53700;
+}
+.input-submit {
+	cursor: pointer;
+	color: white;
+	background-color: #E24500;
+	min-width: 75px;
+	max-width: 150px;
+}
+.main-search {
+	padding: 10px 0;
+}
 
 
 .page-footer {
