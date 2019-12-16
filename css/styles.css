@@ -145,6 +145,31 @@ a:focus {
 }
 
 
+.modal-bg {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	padding: 10px;
+}
+.modal {
+	background-color: white;
+	padding: 10px;
+	border-radius: 5px;
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+}
+.modal-img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+
 .page-nav {
 	background-color: #E24500;
 }
@@ -310,6 +335,10 @@ a:focus {
 	height: 100%;
 	position: absolute;
 	z-index: 1;
+}
+.doc-img {
+	max-width: 100%;
+	max-height: 100%;
 }
 .doc-heading-a {
 	border-bottom: 1px solid #E24500;
