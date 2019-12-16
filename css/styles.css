@@ -67,6 +67,7 @@ body {
 	padding: 5px 10px;
 	border: 1px solid black;
 	border-radius: 5px;
+	cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -75,15 +76,17 @@ body {
 main section + section {
 	margin-top: 10px;
 }
+main section:last-child {
+	margin-bottom: 30px;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Ubuntu";
 	font-weight: normal;
-	text-align: center;
 	border-bottom-color: #E24500;
 	border-bottom-style: solid;
 	border-bottom-width: 0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	color: #E24500;
 }
 h1 {
@@ -92,6 +95,7 @@ h1 {
 	margin-bottom: 15px;
 	font-size: 30px;
 	color: #333;
+	text-align: center;
 }
 h2 {
 	border-bottom-width: 1px;
@@ -99,10 +103,17 @@ h2 {
 	margin-bottom: 10px;
 	font-size: 25px;
 	color: #333;
+	text-align: center;
 }
 h3 {
 	padding: 2px 5px;
 	font-size: 20px;
+}
+* + h1, * + h2 {
+	margin-top: 10px;
+}
+* + h3, * + h4, * + h5, * + h6 {
+	margin-top: 5px;
 }
 
 .ul-line {
@@ -143,7 +154,24 @@ a:hover,
 a:focus {
 	text-decoration: underline;
 }
+.button-colored {
+	color: white;
+	background-color: #E24500;
+	border: 1px solid #B53700;
+}
+.mrgn-t {
+	margin-top: 10px;
+}
 
+.button-red {
+	color: white;
+	background-color: #E20026;
+	border: 1px solid #B5001E;
+}
+.button-red:focus,
+.button-red:hover {
+	background-color: #B5001E;
+}
 
 .modal-bg {
 	z-index: 100;
@@ -193,8 +221,8 @@ a:focus {
 .page-nav .active,
 .page-nav a:focus,
 .page-nav a:hover,
-.input-submit:focus,
-.input-submit:hover {
+.button-colored:focus,
+.button-colored:hover {
 	background-color: #B53700;
 }
 
@@ -261,9 +289,6 @@ a:focus {
 	box-shadow: inset 0 0 5px #B53700;
 }
 .input-submit {
-	cursor: pointer;
-	color: white;
-	background-color: #E24500;
 	min-width: 75px;
 	max-width: 150px;
 }
@@ -309,7 +334,8 @@ a:focus {
 	font-size: 16px;
 }
 .ul-gray a:focus,
-.ul-gray a:hover {
+.ul-gray a:hover,
+.ul-gray .active {
 	background-color: #ccc;
 }
 
@@ -327,6 +353,8 @@ a:focus {
 	height: 120px;
 	position: relative;
 	cursor: pointer;
+	border: none;
+	background: none;
 }
 .doc-img-popup {
 	background: rgba(0,0,0,0.4) url("../img/holder.svg") no-repeat center center;
@@ -365,6 +393,14 @@ a:focus {
 .doc-tags a:hover,
 .doc-tags a:focus {
 	text-decoration: underline;
+}
+.doc-author {
+	margin-left: 15px;
+	color: gray;
+}
+.doc-img-holder-bordered {
+	border: 1px solid #E24500;
+	border-radius: 2px;
 }
 
 

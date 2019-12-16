@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Edu -  История Казахстана</title>
+    <title>Edu -  История Казахстана - document#123</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="icon" sizes="192x192" href="img/icon-highres.png">
@@ -36,7 +36,7 @@
           <div class="flex-between">
             <ul class="ul-line ul-gray">
               <li><a href="">Статьи</a></li>
-              <li><a href="">Документы</a></li>
+              <li><a href="" class="active">Документы</a></li>
               <li><a href="">Тесты</a></li>
             </ul>
 
@@ -49,22 +49,27 @@
       </section>
 
       <section class="positioner">
-        <div class="document" id="document123">
-          <button class="doc-img-holder flex-center" onclick="showImage(this)">
+        <h2><a href="/subjects.history-of-kazakhstan.document.html">document#123</a></h2>
+          <button class="doc-img-holder doc-img-holder-bordered flex-center" onclick="showImage(this)">
             <img class="doc-img" data-src="/img/1.jpg" src="" alt="Превью">
             <div class="doc-img-popup"></div>
           </button>
-          <div class="doc-info">
-            <a class="doc-heading-a" href="/subjects.history-of-kazakhstan.document.html">
-              document#123
-              <small class="doc-author">admin, 16.12.2019 13:57</small>
-            </a>
-            <code>
-              <a href="" target="_blank">1.jpg</a>
-            </code>
-            <p class="doc-tags"><a href="?search=123">#123</a>, <a href="?search=document">#document</a>, <a href="?search=test">#test</a></p>
-            <p class="doc-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cum.</p>
-          </div>
+
+          <h3>Информация</h3>
+          <p><b>Автор:</b> admin</p>
+          <p><b>Время загрузки:</b> 16.12.2019 13:57:24</p>
+          <p><b>Полноразмерная картинка:</b> <code><a href="" target="_blank">1.jpg</a></code></p>
+
+          <h3>Тэги</h3>
+          <p class="doc-tags"><a href="?search=123">#123</a>, <a href="?search=document">#document</a>, <a href="?search=test">#test</a></p>
+
+          <h3>Описание</h3>
+          <p class="doc-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, cum.</p>
+
+          <section class="mrgn-t">
+            <a href="" class="button button-colored">Редактировать</a>
+            <a href="" class="button button-red">Пожаловаться</a>
+          </section>
         </div>
       </section>
     </main>

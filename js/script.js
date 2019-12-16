@@ -3,20 +3,18 @@
 const showImage = (imageHolderAnchorObject) => {
   const src = imageHolderAnchorObject.getElementsByClassName("doc-img")[0].src;
 
-  let modalBG = document.createElement("div");
-  modalBG.classList = "modal-bg flex-center";
-  document.body.appendChild(modalBG);
-  const closeModal = () => {
-    modalBG.parentElement.removeChild(modalBG);
-  };
-  modalBG.onclick = closeModal;
+  document.modalBG = document.createElement("div");
+  document.modalBG.classList = "modal-bg flex-center";
+  document.body.appendChild(document.modalBG);
+
+  document.modalBG.addEventListener("click", closeModal);
   // document.onmousedown = (event) => {
-  //     if (event.target == modalBG) closeModal();
+  //     if (event.target == document.modalBG) closeModal();
   // };
 
   let modal = document.createElement("div");
   modal.classList = "modal";
-  modalBG.appendChild(modal);
+  document.modalBG.appendChild(modal);
 
   let img = document.createElement("img");
   img.classList = "modal-img";
@@ -29,20 +27,30 @@ const showImage = (imageHolderAnchorObject) => {
   // modal.appendChild(p);
 };
 
+const closeModal = () => {
+  if (document.modalBG) {
+    document.modalBG.parentElement.removeChild(document.modalBG);
+    delete document.modalBG;
+  }
+};
+
+document.addEventListener("keydown", (event) => event.code == "Escape" ? closeModal() : null);
+
 
 
 // images lazy loading
 const lazyLoading = () => {
-  let docs = document.getElementsByClassName("document");
+  let imgs = document.getElementsByTagName("img");
 
-  Array.from(docs).forEach(doc => {
-    let s = doc.offsetTop;  // scrolled, docScrolled
-    let dh = parseInt(getComputedStyle(doc).height);  // docHeidht
+  Array.from(imgs).forEach(img => {
+    if (!img.hasAttribute("data-src")) return;
+
+    let s = img.offsetTop;  // scrolled, docScrolled
+    let dh = parseInt(getComputedStyle(img).height);  // docHeidht
     let wh = window.innerHeight;  // windowHeight
     let x = window.scrollY;  // sindowScrolled
 
     if (s + dh > x && s < x + wh) {
-      let img = doc.getElementsByClassName("doc-img")[0];
       img.src = img.getAttribute("data-src");
     }
   });
