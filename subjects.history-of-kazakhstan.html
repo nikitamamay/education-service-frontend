@@ -25,18 +25,27 @@
     </nav>
 
     <main>
-      <section class="positioner">
-        <h1>Предметы</h1>
-        <section class="flex-cards">
-          <a class="col2 card" href="/subjects.history-of-kazakhstan.html">
-            <img class="card-img" src="img/history-of-kazakhstan.svg" alt="История Казахстана" width="100px" height="100px">
-            История Казахстана
-          </a>
-          <a class="col2 card" href="/subjects.test.html">
-            <img class="card-img" src="img/answers.svg" alt="test" width="100px" height="100px">
-            test
-          </a>
-        </section>
+      <section class="main-subject-section section-gray">
+        <div class="positioner">
+          <h1>
+            <a href="/subjects.history-of-kazakhstan.html">
+              История Казахстана
+            </a>
+          </h1>
+
+          <div class="flex-between">
+            <ul class="ul-line ul-gray">
+              <li><a href="">Статьи</a></li>
+              <li><a href="">Документы</a></li>
+              <li><a href="">Тесты</a></li>
+            </ul>
+
+            <form class="flex-grow flex-between form-line form-search" action="">
+              <input type="text" name="search" class="input-text">
+              <input type="submit" value="Поиск" class="input-submit">
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 

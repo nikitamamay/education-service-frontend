@@ -3,7 +3,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 html, body {
 	height: 100%;
@@ -11,6 +11,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
+	align-content: stretch;
 }
 
 
@@ -34,6 +35,9 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	margin: -5px;
+}
+.flex-grow {
+	flex-grow: 1;
 }
 
 .col1 { width: 8.333%; }
@@ -63,14 +67,56 @@ body {
 	border: 1px solid black;
 	border-radius: 5px;
 }
-.mrgn-t {
+main section + section {
 	margin-top: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Ubuntu";
+	font-weight: normal;
+	text-align: center;
+	border-bottom-color: #E24500;
+	border-bottom-style: solid;
+	border-bottom-width: 0;
+	margin-bottom: 10px;
+	color: #E24500;
+}
+h1 {
+	border-bottom-width: 2px;
+	padding: 3px 10px;
+	margin-bottom: 15px;
+	font-size: 30px;
+	color: #333;
+}
+h2 {
+	border-bottom-width: 1px;
+	padding: 2px 7px;
+	margin-bottom: 10px;
+	font-size: 25px;
+	color: #333;
+}
+h3 {
+	padding: 2px 5px;
+	font-size: 20px;
+}
+
+.ul-line {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: inherit;
+	text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus {
+	color: #B53700;
 }
 
 
 .page-nav {
 	background-color: #E24500;
-	min-height: 50px;
 }
 .page-nav *,
 .page-footer * {
@@ -81,18 +127,13 @@ body {
 }
 .logo-img {
 }
-
-.page-nav-ul {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-}
 .page-nav a {
 	display: block;
 	text-decoration: none;
 	padding: 0 10px;
 	height: 50px;
 	line-height: 50px;
+	font-size: 16px;
 }
 .page-nav .active,
 .page-nav a:focus,
@@ -112,10 +153,13 @@ body {
 .banner * {
 	color: white;
 }
-.banner-positioner > * + * {
-	margin-top: 15px;
+.banner h1 {
+	margin: 0;
+	border: none;
+	font-size: 50px;
 }
 .banner-button {
+	margin-top: 15px;
 	text-align: center;
 	border-color: white;
 	background-color: rgba(255, 255, 255, 0.1);
@@ -168,10 +212,6 @@ body {
 	min-width: 75px;
 	max-width: 150px;
 }
-.main-search {
-	padding: 10px 0;
-}
-
 
 .card {
 	display: block;
@@ -196,6 +236,26 @@ body {
 	margin: 0 auto 10px;
 	width: 100px;
 	height: 100px;
+}
+
+.main-subject-section {
+	padding: 10px 0;
+}
+.ul-gray {
+	margin-right: 10px;
+}
+.ul-gray a {
+	display: block;
+	background-color: #ddd;
+	text-decoration: none;
+	color: #333;
+	padding: 0 12px;
+	line-height: 35px;
+	font-size: 16px;
+}
+.ul-gray a:focus,
+.ul-gray a:hover {
+	background-color: #ccc;
 }
 
 
