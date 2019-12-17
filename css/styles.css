@@ -349,8 +349,10 @@ a:focus {
 }
 .doc-img-holder {
 	margin-right: 10px;
-	width: 120px;
-	height: 120px;
+	min-width: 120px;
+	min-height: 120px;
+	max-width: 120px;
+	max-height: 120px;
 	position: relative;
 	cursor: pointer;
 	border: none;
@@ -401,6 +403,9 @@ a:focus {
 .doc-img-holder-bordered {
 	border: 1px solid #E24500;
 	border-radius: 2px;
+}
+.document + .document {
+	margin-top: 10px;
 }
 
 

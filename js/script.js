@@ -45,13 +45,12 @@ const lazyLoading = () => {
   Array.from(imgs).forEach(img => {
     if (!img.hasAttribute("data-src")) return;
 
-    let s = img.offsetTop;  // scrolled, docScrolled
-    let dh = parseInt(getComputedStyle(img).height);  // docHeidht
-    let wh = window.innerHeight;  // windowHeight
-    let x = window.scrollY;  // sindowScrolled
+    let { top, bottom } = img.getBoundingClientRect();  // position of the image edges relative to the viewport
+    let wh = window.innerHeight;  // window Height
 
-    if (s + dh > x && s < x + wh) {
+    if (bottom > 0 && top < wh) {
       img.src = img.getAttribute("data-src");
+      img.removeAttribute("data-src");
     }
   });
 };
@@ -59,5 +58,5 @@ document.addEventListener("scroll", lazyLoading);
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    lazyLoading();
+  lazyLoading();
 });
