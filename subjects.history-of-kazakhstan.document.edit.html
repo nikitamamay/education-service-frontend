@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Edu -  История Казахстана - document#123 - Редактирование</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="icon" sizes="192x192" href="img/icon-highres.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#E24500">
+  </head>
+  <body>
+    <nav class="page-nav">
+      <div class="positioner flex-between">
+        <a href="/index.html" class="logo">
+          <img src="img/logo.svg" alt="Logo" class="logo-img" height="50px">
+        </a>
+        <ul class="ul-line">
+          <li><a href="/index.html">Главная</a></li>
+          <li><a href="/about.html">О проекте</a></li>
+          <li><a href="/subjects.html" class="active">Предметы</a></li>
+          <li><a href="/contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="main-subject-section section-gray">
+        <div class="positioner">
+          <h1>
+            <a href="/subjects.history-of-kazakhstan.html">
+              История Казахстана
+            </a>
+          </h1>
+
+          <div class="flex-between">
+            <ul class="ul-line ul-gray">
+              <li><a href="">Статьи</a></li>
+              <li><a href="" class="active">Документы</a></li>
+              <li><a href="">Тесты</a></li>
+            </ul>
+
+            <form class="flex-grow flex-between form-line form-search" action="">
+              <input type="text" name="search" class="input-text">
+              <input type="submit" value="Поиск" class="input-submit button-colored">
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="positioner">
+        <h2>
+          Документ № 123
+        </h2>
+
+        <div class="flex-between">
+          <button class="doc-img-holder doc-img-holder-bordered flex-center" onclick="showImage(this)">
+            <img class="doc-img" data-src="/img/1.jpg" src="" alt="Превью">
+            <div class="doc-img-popup"></div>
+          </button>
+
+          <div class="doc-info">
+            <h3>Информация</h3>
+            <p><b>Автор:</b> admin</p>
+            <p><b>Время загрузки:</b> 16.12.2019 13:57:24</p>
+            <p><b>Полноразмерная картинка:</b> <code><a href="" target="_blank">1.jpg</a></code></p>
+          </div>
+        </div>
+
+        <form action="" method="post" id="doc-edit-form">
+          <div class="flex-grid">
+            <div class="col6 flex-column">
+              <!-- <label class="form-label">Вращение картинки:</label>
+              <div class="form-line">
+                <button class="form-input form-button" onclick="rotateImage(-1)">-90°</button>
+                <button class="form-input form-button" onclick="rotateImage(0)">0°</button>
+                <button class="form-input form-button" onclick="rotateImage(1)">+90°</button>
+                <button class="form-input form-button" onclick="rotateImage(2)">+180°</button>
+              </div>
+              <input type="hidden" name="rotate" id="input-rotate-image"> -->
+              <label for="doc-descriprion">
+                <h3>Описание</h3>
+              </label>
+              <textarea class="input input-rounded input-textarea" name="description" id="doc-descriprion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, autem?</textarea>
+            </div>
+            <div class="col6 flex-column">
+              <label class="form-label" for="doc-tags">
+                <h3>Тэги</h3>
+              </label>
+              <select class="input input-rounded input-select flex-grow" name="tags" id="doc-tags" multiple>
+                <optgroup label="Тип">
+                  <option value="таблица">таблица</option>
+                  <option value="карта">карта</option>
+                  <option value="схема">схема</option>
+                  <option value="термин">термин</option>
+                  <option value="описание-события">описание-события</option>
+                </optgroup>
+                <optgroup label="Время">
+                  <option value="каменный-век">каменный-век</option>
+                  <option value="железный-век">железный-век</option>
+                  <option value="средневековье">средневековье</option>
+                  <option value="XVIII">XVIII</option>
+                  <option value="XIX">XIX</option>
+                  <option value="1990-е">1990-е</option>
+                  <option value="современность">современность</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <input type="hidden" name="delete" id="input-doc-delete">
+          <button class="button button-colored mrgn-t" onclick="sendForm()">Сохранить</button>
+          <button class="button button-red mrgn-t" onclick="deleteDocument()">Удалить документ</button>
+        </form>
+
+        <!-- <div class="flex-grid">
+          <div class="col6 flex-between">
+          </div>
+          <form class="col6" onsubmit="addNewTag()">
+            <label for="add-new-tag">
+              Добавить новый тэг:
+            </label>
+            <div class="flex-between form-line">
+              <input class="input-text" type="text" id="add-new-tag">
+              <input class="input-submit button-colored" type="submit" value="Добавить">
+            </div>
+          </form>
+        </div> -->
+
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="positioner flex-between">
+        <ul class="page-footer-ul col3">
+          <li><a href="/index.html">Главная</a></li>
+          <li><a href="/about.html">О проекте</a></li>
+          <li><a href="/subjects.html">Предметы</a></li>
+          <li><a href="/contacts.html">Контакты</a></li>
+        </ul>
+        <div class="col3 align-right">
+          <a href="/index.html" class="logo">
+            <img src="img/logo.svg" alt="Logo" class="logo-img" height="40px">
+          </a>
+          <p>&copy; Mamay Nikita, 2019.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

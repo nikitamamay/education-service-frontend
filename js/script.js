@@ -60,3 +60,19 @@ document.addEventListener("scroll", lazyLoading);
 document.addEventListener("DOMContentLoaded", () => {
   lazyLoading();
 });
+
+
+
+const sendForm = () => {
+  let form = document.getElementById("doc-edit-form");
+  form.submit();
+};
+
+const deleteDocument = () => {
+  if (confirm("Вы уверены, что хотите удалить документ?")) {
+    let inputDelete = document.getElementById('input-doc-delete');
+    inputDelete.value = true;
+    sendForm();
+  }
+};
+
